@@ -10,7 +10,8 @@ const bookFlightTemplate = new mongoose.Schema({
     company:{type:String, required:true},
     dateOfDeparture:{type:String, required:true},
     password:{type:String,required:true,unique:true},
+    passwordConfirmed:{type:String,required:true,unique:true},
     date:{type:Date, default:Date.now}
 })
 //myBookings is the table in the db
-mongoose.exports =mongoose.model('booking',bookFlightTemplate)
+module.exports =mongoose.model('booking',bookFlightTemplate)
